@@ -1,24 +1,17 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = { reactStrictMode: true };
-module.exports = nextConfig;
-
-module.exports = {
+const nextConfig = {
   reactStrictMode: true,
-  headers() {
+  async headers() {
     return [
       {
         source: "/(.*)",
         headers: [
-          {
-            key: "X-Frame-Options",
-            value: "ALLOWALL",
-          },
-          {
-            key: "Content-Security-Policy",
-            value: "frame-ancestors *",
-          },
+          { key: "X-Frame-Options", value: "ALLOWALL" },
+          { key: "Content-Security-Policy", value: "frame-ancestors *" },
         ],
       },
     ];
   },
 };
+
+module.exports = nextConfig;
