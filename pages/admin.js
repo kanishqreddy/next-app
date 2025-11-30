@@ -12,7 +12,7 @@ export default function Admin(){
   if (!user) return <div>Please <a href="/login">login first</a>.</div>;
 
   // Replace with your email
-  if (user.email !== "your.email@example.com") return <div>Access Denied</div>;
+  if (user.email !== "bandakanishqreddy@gmail.com") return <div>Access Denied</div>;
 
   return <h1>Welcome Admin — secure access</h1>;
 }
