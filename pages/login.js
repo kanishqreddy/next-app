@@ -20,6 +20,7 @@ const login = async () => {
 try {
 await signInWithEmailAndPassword(auth, email, password)
 alert('Logged in!')
+window.location.href = "/dashboard"
 } catch(e){ alert(e.message) }
 }
 
